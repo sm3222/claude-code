@@ -1,9 +1,11 @@
 # Changelog
 
-## 2.0.2
+## 2.0.5
 
-- Updated Bedrock default Sonnet model to `global.anthropic.claude-sonnet-4-5-20250929-v1:0`
-- Various bug fixes and presentation improvements
+- IDE: Fix IME unintended message submission with Enter and Tab
+- IDE: Add "Open in Terminal" link in login screen
+- Fix unhandled OAuth expiration 401 API errors
+- SDK: Added SDKUserMessageReplay.isReplay to prevent duplicate messages
 
 ## 2.0.1
 
