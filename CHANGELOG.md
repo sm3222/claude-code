@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.13
+
+- Fixed `/plugin` not working on native build
+
 ## 2.0.12
 
 - **Plugin System Released**: Extend Claude Code with custom commands, agents, hooks, and MCP servers from marketplaces
