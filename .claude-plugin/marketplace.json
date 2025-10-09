@@ -35,6 +35,17 @@
       },
       "source": "./plugins/commit-commands",
       "category": "productivity"
+    },
+    {
+      "name": "feature-dev",
+      "description": "Comprehensive feature development workflow with specialized agents for codebase exploration, architecture design, and quality review",
+      "version": "1.0.0",
+      "author": {
+        "name": "Siddharth Bidasaria",
+        "email": "sbidasaria@anthropic.com"
+      },
+      "source": "./plugins/feature-dev",
+      "category": "development"
     }
   ]
 }
