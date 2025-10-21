@@ -102,5 +102,6 @@ jobs:
           timeout_minutes: "5"
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           mcp_config: /tmp/mcp-config/mcp-servers.json
+          claude_args: "--model claude-sonnet-4-5-20250929"
           claude_env: |
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
