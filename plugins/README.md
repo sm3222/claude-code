@@ -32,6 +32,16 @@ Simplifies common git operations with streamlined commands for committing, pushi
   - `/clean_gone` - Clean up stale local branches marked as [gone]
 - **Use case**: Faster git workflows with less context switching
 
+### [code-review](./code-review/)
+
+**Automated Pull Request Code Review Plugin**
+
+Provides automated code review for pull requests using multiple specialized agents with confidence-based scoring to filter false positives.
+
+- **Command**:
+  - `/code-review` - Automated PR review workflow
+- **Use case**: Automated code review on pull requests with high-confidence issue detection (threshold ≥80)
+
 ### [feature-dev](./feature-dev/)
 
 **Comprehensive Feature Development Workflow Plugin**
