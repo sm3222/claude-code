@@ -9,9 +9,9 @@ Repository: anthropics/claude-code
 
 Task overview:
 
-1. First, get all open bugs updated in the last 3 days with at least 5 engagements:
+1. First, get all open bugs updated in the last 3 days with at least 50 engagements:
    ```bash
-   gh issue list --repo anthropics/claude-code --state open --label bug --limit 1000 --json number,title,updatedAt,comments,reactions | jq -r '.[] | select((.updatedAt >= (now - 259200 | strftime("%Y-%m-%dT%H:%M:%SZ"))) and ((.comments | length) + ([.reactions[].content] | length) >= 5)) | "\(.number)"'
+   gh issue list --repo anthropics/claude-code --state open --label bug --limit 1000 --json number,title,updatedAt,comments,reactions | jq -r '.[] | select((.updatedAt >= (now - 259200 | strftime("%Y-%m-%dT%H:%M:%SZ"))) and ((.comments | length) + ([.reactions[].content] | length) >= 50)) | "\(.number)"'
    ```
 
 2. Save the list of issue numbers and create a TODO list with ALL of them. This ensures you process every single one.
