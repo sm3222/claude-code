@@ -7,7 +7,6 @@
 - VSCode: Adding the respectGitIgnore configuration to include .gitignored files in file searches (defaults to true)
 - Fixed a bug with subagents and MCP servers related to "Tool names must be unique" error
 - Fixed issue causing `/compact` to fail with `prompt_too_long` by making it respect existing compact boundaries
-- Fixed conversation compaction to respect existing compact boundaries, preventing duplicate summarization of already-compacted messages
 - Fixed plugin uninstall not removing plugins
 
 ## 2.0.30
