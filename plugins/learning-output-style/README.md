@@ -1,12 +1,17 @@
 # Learning Style Plugin
 
-This plugin recreates the unshipped Learning output style as a SessionStart hook.
+This plugin combines the unshipped Learning output style with explanatory functionality as a SessionStart hook.
+
+**Note:** This plugin differs from the original unshipped Learning output style by also incorporating all functionality from the [explanatory-output-style plugin](https://github.com/anthropics/claude-code/tree/main/plugins/explanatory-output-style), providing both interactive learning and educational insights.
 
 WARNING: Do not install this plugin unless you are fine with incurring the token cost of this plugin's additional instructions and the interactive nature of learning mode.
 
 ## What it does
 
-When enabled, this plugin automatically adds instructions at the start of each session that encourage Claude to engage you in active learning by requesting meaningful code contributions at decision points.
+When enabled, this plugin automatically adds instructions at the start of each session that encourage Claude to:
+
+1. **Learning Mode:** Engage you in active learning by requesting meaningful code contributions at decision points
+2. **Explanatory Mode:** Provide educational insights about implementation choices and codebase patterns
 
 Instead of implementing everything automatically, Claude will:
 
@@ -14,6 +19,7 @@ Instead of implementing everything automatically, Claude will:
 2. Focus on business logic and design choices where your input truly matters
 3. Prepare the context and location for your contribution
 4. Explain trade-offs and guide your implementation
+5. Provide educational insights before and after writing code
 
 ## How it works
 
@@ -47,13 +53,31 @@ Consider: auto-extending improves UX but may leave sessions open longer; hard ti
 
 **You:** [Write 5-10 lines implementing your preferred approach]
 
+## Educational insights
+
+In addition to interactive learning, Claude will provide educational insights about implementation choices using this format:
+
+```
+`★ Insight ─────────────────────────────────────`
+[2-3 key educational points about the codebase or implementation]
+`─────────────────────────────────────────────────`
+```
+
+These insights focus on:
+- Specific implementation choices for your codebase
+- Patterns and conventions in your code
+- Trade-offs and design decisions
+- Codebase-specific details rather than general programming concepts
+
 ## Usage
 
 Once installed, the plugin activates automatically at the start of every session. No additional configuration is needed.
 
 ## Migration from Output Styles
 
-This plugin is based on the unshipped "Learning" output style. It provides an interactive learning experience where you actively contribute code at meaningful decision points.
+This plugin combines the unshipped "Learning" output style with the deprecated "Explanatory" output style. It provides an interactive learning experience where you actively contribute code at meaningful decision points, while also receiving educational insights about implementation choices.
+
+If you previously used the explanatory-output-style plugin, this learning plugin includes all of that functionality plus interactive learning features.
 
 This SessionStart hook pattern is roughly equivalent to CLAUDE.md, but it is more flexible and allows for distribution through plugins.
 
