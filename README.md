@@ -14,9 +14,26 @@ Claude Code is an agentic coding tool that lives in your terminal, understands y
 
 1. Install Claude Code:
 
-```sh
+**macOS/Linux:**
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+**Homebrew:**
+```bash
+brew install --cask claude-code
+```
+
+**Windows:**
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+
+**NPM:**
+```bash
 npm install -g @anthropic-ai/claude-code
 ```
+Requires [Node.js 18+](https://nodejs.org/en/download/)
 
 2. Navigate to your project directory and run `claude`.
 
