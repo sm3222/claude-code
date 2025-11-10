@@ -31,7 +31,7 @@ Examples of false positives, for steps 4 and 5:
 - Pre-existing issues
 - Something that looks like a bug but is not actually a bug
 - Pedantic nitpicks that a senior engineer wouldn't call out
-- Issues that a linter will catch (no need to run the linter to verify)
+- Issues that a linter, typechecker, or test runner will catch (eg. failing tests, lint errors, type errors). Do not run these to verify; assume that they will be run as part of CI.
 - General code quality issues (eg. lack of test coverage, general security issues), unless explicitly required in CLAUDE.md
 - Issues that are called out in CLAUDE.md, but explicitly silenced in the code (eg. due to a lint ignore comment)
 
