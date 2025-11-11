@@ -1,5 +1,45 @@
 # Changelog
 
+## 2.0.37
+
+- Fixed how idleness is computed for notifications
+- Hooks: Added matcher values for Notification hook events
+- Output Styles: Added `keep-coding-instructions` option to frontmatter
+
+## 2.0.36
+
+- Fixed: DISABLE_AUTOUPDATER environment variable now properly disables package manager update notifications
+- Fixed queued messages being incorrectly executed as bash commands
+- Fixed input being lost when typing while a queued message is processed
+
+## 2.0.35
+
+- Improve fuzzy search results when searching commands
+- Improved VS Code extension to respect `chat.fontSize` and `chat.fontFamily` settings throughout the entire UI, and apply font changes immediately without requiring reload
+- Added `CLAUDE_CODE_EXIT_AFTER_STOP_DELAY` environment variable to automatically exit SDK mode after a specified idle duration, useful for automated workflows and scripts
+- Migrated `ignorePatterns` from project config to deny permissions in the localSettings.
+- Fixed messages returning null `stop_reason` and `stop_sequence` values
+- Fixed menu navigation getting stuck on items with empty string or other falsy values (e.g., in the `/hooks` menu)
+
+## 2.0.34
+
+- VSCode Extension: Added setting to configure the initial permission mode for new conversations
+- Improved file path suggestion performance with native Rust-based fuzzy finder
+- Fixed infinite token refresh loop that caused MCP servers with OAuth (e.g., Slack) to hang during connection
+- Fixed memory crash when reading or writing large files (especially base64-encoded images)
+
+## 2.0.33
+
+- Native binary installs now launch quicker.
+- Fixed `claude doctor` incorrectly detecting Homebrew vs npm-global installations by properly resolving symlinks
+- Fixed `claude mcp serve` exposing tools with incompatible outputSchemas
+
+## 2.0.32
+
+- Un-deprecate output styles based on community feedback
+- Added `companyAnnouncements` setting for displaying announcements on startup
+- Fixed hook progress messages not updating correctly during PostToolUse hook execution
+
 ## 2.0.31
 
 - Windows: native installation uses shift+tab as shortcut for mode switching, instead of alt+m
