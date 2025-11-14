@@ -9,7 +9,6 @@
 - Fixed: Bedrock users no longer see duplicate Opus entries in the /model picker when using `--model haiku`
 - Fixed broken security documentation links in trust dialogs and onboarding
 - Fixed issue where pressing ESC to close the diff modal would also interrupt the model
-- Slash Commmands: Added CLAUDE_PROJECT_DIR and CLAUDE_PLUGIN_ROOT env vars to bash command processing
 - ctrl-r history search landing on a slash command no longer cancels the search
 - SDK: Support custom timeouts for hooks
 - Allow more safe git commands to run without approval
