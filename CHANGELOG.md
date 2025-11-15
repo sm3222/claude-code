@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.42
+
+- Added `agent_id` and `agent_transcript_path` fields to `SubagentStop` hooks.
+
 ## 2.0.41
 
 - Added `model` parameter to prompt-based stop hooks, allowing users to specify a custom model for hook evaluation
