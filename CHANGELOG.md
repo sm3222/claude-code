@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.50
+
+- Fixed bug preventing calling MCP tools that have nested references in their input schemas
+- Silenced a noisy but harmless error during upgrades
+- Improved ultrathink text display
+- Improved clarity of 5-hour session limit warning message
+
 ## 2.0.49
 
 - Added readline-style ctrl-y for pasting deleted text
